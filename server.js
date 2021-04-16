@@ -43,3 +43,42 @@ if(process.env.NODE_ENV === "production") {
       res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
     });
 }
+
+
+////////////////////////  Login/Register Routes  ////////////////////////
+
+app.post("/isAuthenticated", function(req, res){
+    if(req.isAuthenticated()) return res.send({isAuthenticated: true, user: req.user});
+    return res.send({isAuthenticated: false});
+});
+
+app.post("/login", function(req, res, next) {
+    passport.authenticate("local", function(error, user, info) {
+        if (error) return next(error); 
+        if (!user) return res.send(error);
+        req.logIn(user, function(error) {
+            if (error) return next(error);
+            return res.send("sucess");
+        });
+    })(req, res, next);
+});
+
+app.post("/register", function(req, res){
+    User.register(
+        new User({username: req.body.username, name:req.body.name}), 
+        req.body.password, function(error, user){
+            if(error){
+                console.log(error);
+                return res.send(error);
+            }
+            passport.authenticate("local")(req, res, function(){
+                return res.send("sucess");
+            });
+        }
+    );
+});
+
+app.post("/logout", function(req, res){ 
+    req.logout();
+    return res.send("Logged out");
+});
