@@ -1,0 +1,123 @@
+html {
+    font-family: "Montserrat", sans-serif;
+}
+body {
+    background: #eee;
+    background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+    padding: 0;
+    margin: 0;
+}
+
+/************************* Header *************************/
+#header-section {
+    background-color: #f5ba13;
+}
+#global-container-fluid {
+    padding: 0 10%;
+}
+#nav-brand {
+    font-family: "McLaren", cursive;
+    font-size: 2.5rem;
+}
+#navbar {
+    margin-bottom: 2rem;
+}
+.nav-item {
+    padding: 0 10px;
+}
+.link-navbar {
+    font-family: "Montserrat";
+}
+
+/************************* Footer *************************/
+
+#footer {
+    background-color: #f5ba13;
+    text-align: center;
+    padding-top: 1%;
+    width: 100%;
+    margin-left: 0px;
+}
+.socials-link {
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+.socials-link:hover {
+    text-decoration: underline;
+}
+#copyright{
+    margin-top: 40px;
+    color: #fff;
+}
+
+/************************* Sign *************************/
+#title {
+    text-align: center;
+    padding: 2% 10% 0;
+}
+/************************* SignForm *************************/
+.sign-form {
+    padding: 2% 10%;
+}
+
+/************************* Note *************************/
+.counter {
+    border-radius: 7px;
+    box-shadow:5px #ccc;
+}
+/* .note h1 {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+}
+.note p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.note button {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    color: #f5ba13;
+    border: none;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    outline: none;
+} */
+/************************* CreateArea *************************/
+form.create-counter {
+    position: relative;
+    width: 480px;
+    margin: 30px auto 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+form.create-counter input, form.create-counter textarea {
+    width: 100%;
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 1.2em;
+    font-family: inherit;
+    resize: none;
+}
+form.create-counter button {
+    position: absolute;
+    right: 18px;
+    bottom: -18px;
+    background: #f5ba13;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+}
