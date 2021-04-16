@@ -32,7 +32,7 @@ function CreateArea(props) {
           console.log("Pushed with success: "+id);
           setCounter(prevCounter => {return {...prevCounter, key:id, id:id}});
           props.onAdd(counter);
-          setCounter({title:"", count:0});
+          setCounter({title:"", count:""});
     }
   });
   }

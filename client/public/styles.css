@@ -2,7 +2,8 @@ html {
     font-family: "Montserrat", sans-serif;
 }
 body {
-    background: #eee;
+    background: #374954;
+    color: #ccc;
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
     padding: 0;
     margin: 0;
@@ -10,7 +11,7 @@ body {
 
 /************************* Header *************************/
 #header-section {
-    background-color: #f5ba13;
+    background-color: #374954;
 }
 #global-container-fluid {
     padding: 0 10%;
@@ -32,7 +33,7 @@ body {
 /************************* Footer *************************/
 
 #footer {
-    background-color: #f5ba13;
+    background-color: #374954;
     text-align: center;
     padding-top: 1%;
     width: 100%;
@@ -66,28 +67,21 @@ body {
     border-radius: 7px;
     box-shadow:5px #ccc;
 }
-/* .note h1 {
-    font-size: 1.1em;
-    margin-bottom: 6px;
+.card {
+    background-color: #374954;
+    border-color: #ccc;
+    color: #ccc;
 }
-.note p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
+.actionButton {
+    background-color: #6bbe92;
+    border: 0;
+    width: 60px;
+    margin: 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 50px;
 }
-
-.note button {
-    position: relative;
-    float: right;
-    margin-right: 10px;
-    color: #f5ba13;
-    border: none;
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-    outline: none;
-} */
 /************************* CreateArea *************************/
 form.create-counter {
     position: relative;

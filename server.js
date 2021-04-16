@@ -84,9 +84,46 @@ app.post("/logout", function(req, res){
 });
 
 
+/////////////////////  Create/Delete Counter Routes  /////////////////////
+app.post("/create-counter", function(req, res){
+    let newCounter = new Counter();
+    newCounter.userID = req.user._id;
+    newCounter.title = req.body.title;
+    newCounter.count = req.body.count;
+    newCounter.save(function(error, createdCounter){
+        if(!error){
+            console.log("saved!");
+            res.send({id: createdCounter._id});
+        } else {
+            console.log(error);
+        }
+    });
+});
 
+app.post("/update-counter/:id/:count", function(req, res){
+    Counter.findOneAndUpdate({_id: (req.params.id)}, 
+        {$set: {count: req.params.count}}, 
+        function(error, doc){if(error){console.log(error);}});
+});
 
+app.post("/delete-counter/:id", function(req, res){
+    const id = req.params.id;
+    Counter.findOneAndRemove({_id: id}, function(error){
+        if(error) console.log(error);
+        console.log("deleted");
+    }); 
+});
 
+app.post("/get-counters", function(req, res){
+    Counter.find({userID: req.user._id},
+        function(error, counters) {
+            if (error) return res.send(error);
+            return res.send(counters);
+        }
+    );
+});
+
+///////////////////////////     App Listen    ////////////////////////////
 const port = process.env.PORT || 8080;
 app.listen(port);
 console.log("Server running on port " + port);
