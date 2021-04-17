@@ -1,12 +1,14 @@
 html {
     font-family: "Montserrat", sans-serif;
+    position:relative; 
+    min-height: 100%;
 }
 body {
     background: #374954;
     color: #ccc;
     background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-    padding: 0;
-    margin: 0;
+    margin: 0 0 100px;
+    padding: 0 0 25px;
 }
 
 /************************* Header *************************/
@@ -36,8 +38,13 @@ body {
     background-color: #374954;
     text-align: center;
     padding-top: 1%;
-    width: 100%;
     margin-left: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
 }
 .socials-link {
     padding: 10px;
@@ -48,7 +55,7 @@ body {
     text-decoration: underline;
 }
 #copyright{
-    margin-top: 40px;
+    margin-top: 10px;
     color: #fff;
 }
 
@@ -76,7 +83,7 @@ body {
 /************************* CreateArea *************************/
 form.create-counter {
     position: relative;
-    width: 480px;
+    width: 30%;
     margin: 30px auto 20px auto;
     background: #fff;
     padding: 15px;
@@ -105,4 +112,10 @@ form.create-counter button {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     cursor: pointer;
     outline: none;
+}
+/************************* @media *************************/
+@media (max-width: 1000px) {
+    form.create-counter {
+        width: 50%;
+    }
 }
