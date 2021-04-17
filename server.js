@@ -12,7 +12,7 @@ const LocalStrategy = require("passport-local");
 const User = require("./models/user");
 const Counter = require("./models/counter");
 
-mongoose.connect("mongodb://localhost:27017/CloudCountersDB",//"mongodb+srv://adminzineddine:adminpassword@cluster0.etraw.mongodb.net/myFirstDatabase",
+mongoose.connect("mongodb+srv://adminzineddine:adminpassword@cluster0.hb9u7.mongodb.net/myFirstDatabase",
     {
         useNewUrlParser: true, 
         useUnifiedTopology: true,
